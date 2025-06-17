@@ -4,6 +4,11 @@ from consulta_tjrj import consultar_processo
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return 'API de consulta processual está no ar!'
+
+
 @app.route("/webhook", methods=["POST"])
 def webhook():
     data = request.json
